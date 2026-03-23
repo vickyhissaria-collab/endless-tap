@@ -9,7 +9,7 @@ let db;
 
 function getDB() {
   if (db) return db;
-  const dbPath = process.env.DB_PATH || './data/endless.db';
+  const dbPath = process.env.DB_PATH || '/tmp/endless.db';
   const dir    = path.dirname(dbPath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   db = new Database(dbPath);
