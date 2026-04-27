@@ -100,9 +100,9 @@ else
 fi
 
 log "Building n8n-mcp (this takes a minute)"
-npm install --silent
-npm run build --silent
-npm run rebuild --silent 2>/dev/null || true
+npm install
+npm run build
+npm run rebuild 2>/dev/null || true
 ok "n8n-mcp built at $INSTALL_DIR"
 echo ""
 
